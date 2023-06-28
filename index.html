@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.Css">
+</head>
+<body class="mb-2 bg-secondary text-white">
+    <!-- Container for Header -->
+    <header class="p-3 mb-2 bg-primary text-white">
+        <!-- div for scores link and time -->
+            <!-- View highscores -->
+                <button id="view-scores" class="lead p-2 border bg-info" type="button">View High Scores</button>
+            <!-- Timer -->
+                <p class="time lead">Time remaining: 60s</p>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <!-- Container for Intro, Questions, Answers -->
+        <div class="container">
+            <!-- Section for H1 and Intro // Hide upon Start-->
+            <section id="intro">                 
+                        <h1 class="display-5 p-3" >Welcome to the Javascript Coding Quiz Challenge!</h1>
+                        <p class="lead p-3">Try to answer the following javascript code questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+                        <button id="start" type="button" class="border strt-btn lead p-2 mx-auto bg-info bg-info">Start Quiz</button></p>
+            </section>
+
+            <!-- Section for Question and Answers // Show upon Start-->
+            <section id="questions">        
+
+                    
+                        <h2 id="question" class="p-4">I'm a question</h2>
+                        <ul class="list">
+                            <br>
+                            <br>
+                            <li><button id="answer1" value="0" type="button" class="ansBtn border lead mb-2 p-2 mx-auto bg-info bg-info "
+                                    >Answer1</button></li>
+                            <li><button id="answer2" value="1" type="button" class="ansBtn border lead mb-2 p-2 mx-auto bg-info bg-info "
+                                    >Answer2</button></li>
+                            <li><button id="answer3" value="2" type="button" class="ansBtn border lead mb-2 p-2 mx-auto bg-info bg-info "
+                                    >Answer3</button></li>
+                            <li><button id="answer4" value="3" type="button" class="ansBtn border lead mb-2 p-2 mx-auto bg-info bg-info "
+                                    >Answer4</button></li>
+                        </ul>
+                        <div id="result">
+                            <hr>
+                            <!-- Correct or Wrong will be added via JS -->
+                        </div>
+                    
+            </section>
+
+            <!-- Section for Final Score and Name -->
+            <section id="final">
+                        <h2 class="display-5 p-3">All done!</h2>
+                        <p class="lead">Your final score is: <span id="score">0</span></p>
+                        <!-- <p class="score">Your final score is: </p> -->
+                        <p class="lead">Enter initials: <span><input placeholder="initials" id="initials" /></span>
+                            <button id="submit-score" class="border lead mb-2 p-2 mx-auto bg-info bg-info ">Submit</button>
+                        </p>
+            </section>
+
+            <!-- Section for High Scores -->
+            <section id="highscores">
+
+                            <h2>High Scores</h2>
+                            <!-- High scores should be added as a sorted desc list -->
+                            <ol id="score-list">
+                                <!-- <li></li> -->
+                            </ol>
+                            <button id="goback" class="border lead mb-2 p-2 mx-auto bg-info bg-info ">Go back</button>
+                            <button id="clearscores" class="border lead mb-2 p-2 mx-auto bg-info bg-info ">Clear scores</button>
+            </section>
+
+            <!-- Container Ends -->
+        </div>
+    </main>
+    <script src="Java.JS"></script>
+</body>
